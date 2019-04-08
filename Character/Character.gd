@@ -1,8 +1,12 @@
 extends KinematicBody2D
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+"""
+##### Código do repositório: OneWayColisionExample #####
+## (https://github.com/JoaoNSE/OneWayColisionExample) ##
+Criado por João Henrique Nobre em 08/04/2019
+
+Código de comportamento de movimentação do personagem.
+"""
 
 var GRAV = Vector2(0, 9)
 
@@ -34,7 +38,6 @@ func control(delta):
 	if Input.is_action_just_pressed("jump") and !Input.is_action_pressed("ui_down"):
 		if $RayCast2D.is_colliding():
 			velocity.y = -jump_force
-		
 		
 	velocity.x *= spd
 
